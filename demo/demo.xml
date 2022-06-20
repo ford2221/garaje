@@ -1,0 +1,87 @@
+<odoo>
+    <data>
+<!--
+          <record id="object0" model="./addons/garaje../addons/garaje">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+          </record>
+
+          <record id="object1" model="./addons/garaje../addons/garaje">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="./addons/garaje../addons/garaje">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="./addons/garaje../addons/garaje">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="./addons/garaje../addons/garaje">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+      <record id="aparcamiento1" model="garaje.aparamiento">
+        <field name="name">Plaza alta</field>
+        <field name="plazas">8</field>
+      </record>
+
+      <record id="aparcamiento2" model="garaje.aparamiento">
+        <field name="name">Plaza baja</field>
+        <field name="plazas">10</field>
+      </record>
+
+      <record id="coche1" model="garaje.coche">
+        <field name="name">1234bba</field>
+        <field name="modelo">Mercedes C</field>
+        <field name="construido">1998-06-10</field>
+        <field name="consumo">11.5</field>
+        <field name="averiado">True</field>
+        <field name="description">Es un gran clasico</field>
+        <field name="aparcamiento_id" ref="aparcamiento1" />
+      </record>
+
+      <record id="coche2" model="garaje.coche">
+        <field name="name">bba1234</field>
+        <field name="modelo">Mustang</field>
+        <field name="construido">1968</field>
+        <field name="consumo">8.2</field>
+        <field name="averiado">False</field>
+        <field name="description">The best Classic</field>
+        <field name="aparcamiento_id" ref="aparcamiento1" />
+      </record>
+
+      <record id="coche3" model="garaje.coche">
+        <field name="name">bbc9632</field>
+        <field name="modelo">Camaro</field>
+        <field name="construido">1997-08-15</field>
+        <field name="consumo">4</field>
+        <field name="averiado">0</field>
+        <field name="description">One of the best car</field>
+        <field name="aparcamiento_id" ref="aparcamiento2" />
+      </record>
+
+      <record id="coche4" model="garaje.coche">
+        <field name="name">sfd852</field>
+        <field name="modelo">Dodge</field>
+        <field name="construido">1965-11-05</field>
+        <field name="consumo">9</field>
+        <field name="averiado">1</field>
+        <field name="description">Salió en el 65</field>
+        <field name="aparcamiento_id" ref="aparcamiento2" />
+      </record>
+
+      <record id="mantenimiento1" model="garaje.mantenimiento">
+        <field name="fecha" eval="dateitme.now()" />
+        <field name="tipo">l</field>
+        <field name="coste">23</field>
+        <filed name="coche_ids" eval="[(6, 0, ref('coche2'))]" />
+      </record>
+
+    </data>
+</odoo>
